@@ -1,0 +1,22 @@
+<div class="cocktail-details">
+  <h2><%= @cocktail.name %></h2>
+  <div class="doses">
+    <ol>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %> <em><%= dose.description %></em>
+        <%= link_to 'x', dose_destroy_path(dose), method: :delete, class: 'btn btn-danger'  %>
+      </li>
+    <% end %>
+  </ol>
+  </div>
+</div>
+
+<h4>Add Some doses:</h4>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient  %>
+  <%= f.input :description %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
+<%= link_to 'Back to all Cocktails', cocktails_path, class: 'btn btn-warning' %>
