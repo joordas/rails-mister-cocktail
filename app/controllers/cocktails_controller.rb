@@ -25,6 +25,10 @@ class CocktailsController < ApplicationController
 
   private
 
+  def cocktail_bg_image
+
+  end
+
   def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end

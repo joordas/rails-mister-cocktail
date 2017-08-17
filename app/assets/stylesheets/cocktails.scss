@@ -15,7 +15,8 @@ header {
   align-items: center;
   background: linear-gradient(#ffb347 30%, #ffcc33);
   h1 {
-    & a {
+    & a,
+    a:hover {
       color: #833ab4;
     }
     font-size: 2.4em;

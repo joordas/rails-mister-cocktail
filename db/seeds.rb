@@ -1,3 +1,4 @@
+Dose.destroy_all
 Ingredient.destroy_all
 Cocktail.destroy_all
 
@@ -12,6 +13,15 @@ end
 
 cocktails = ["Mint Julep", "Whiskey Sour", "Mojito"]
 
+url = "http://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{name}"
+
+
+
+image_url = path["drinks"][0]["strDrinkThumb"]
+
 cocktails.each do |cocktail|
-  Cocktail.create!(name: cocktail)
+  # path = JSON.parse(open("#{url}/#{cocktail}"))
+  # image_url = path["drinks"][0]["strDrinkThumb"]
+  # byebug
+  Cocktail.create!(name: cocktail, image_url: image_url)
 end
