@@ -1,5 +1,5 @@
 <div class="row">
 <% @cocktails.each do |cocktail| %>
-    <%= render 'cocktail_card', cocktail: cocktail, image_url: @image_url %>
+    <%= render 'cocktail_card', cocktail: cocktail, image_url: cocktail.photo.url %>
 <% end  %>
 </div>

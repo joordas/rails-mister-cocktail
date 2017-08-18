@@ -12,6 +12,8 @@ gem 'autoprefixer-rails'
 gem 'json'
 require 'open-uri'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

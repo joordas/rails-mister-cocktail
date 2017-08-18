@@ -7,29 +7,48 @@ body:before {
   background: linear-gradient(90deg, #833ab4 20%, #fd1d1d 60%, #fcb045 85%);
   height: 5px;
   width: 100%;
+  padding: 0;
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(#ffb347 30%, #ffcc33);
+  background: #fe7187;
   h1 {
     & a,
     a:hover {
-      color: green;
+      color: #fcff89;
     }
     font-size: 2.4em;
     font-weight: bold;
     padding-bottom: 16px;
-    transform: rotate(-2deg);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
+  .btn-navbar {
+    color: #fcff89;
+    background-color: #6e386e;
+    &:hover {
+      color: #fcff89;
+      opacity: 0.9;
+    }
+  }
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+footer {
+  background-color: #fe7187;
+  color: #fcff89;
+  width: 100%;
+  height: 30px;
+  h5 {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .wrapper {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .cocktail-details {
@@ -39,9 +58,24 @@ header {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   padding: 50px;
 }
-
+.cocktail-card-anchor {
+  &:hover .cocktail {
+    transform: scale(1.03);
+  }
+}
 .cocktail {
-  border: 1px solid red;
+  transition-duration: 0.2s;
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 1px 2px 2px 2px rgba(0, 0, 0, 0.17);
   height: 400px;
   margin: 10px;
+  position: relative;
+  h3 {
+    font-size: 2em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fcff89;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
 }

@@ -1,7 +1,10 @@
 
 <div class="col-xs-12 col-md-6">
-  <div class="cocktail" style="background-image: <%= image_url %>">
+  <%= link_to cocktail_path(cocktail), class:'cocktail-card-anchor' do %>
+  <div class="cocktail" style="background-image: linear-gradient(transparent 0%, rgba(254,113,135, 0.4) 100%), url(<%= image_url || asset_path("placeholder.jpg") %>)"  >
   <h3 class="cocktail-name">
-  <%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+    <%= cocktail.name %>
+  </h3>
   </div>
+  <% end %>
 </div>
